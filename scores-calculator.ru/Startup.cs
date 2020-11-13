@@ -31,8 +31,8 @@ namespace scores_calculator.ru
         public void ConfigureServices(IServiceCollection services)
         {
 
-            string connection = "Server=(localdb)\\mssqllocaldb;Database=rolesappdb;Trusted_Connection=True;";
-            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection));
+            string connection = "server=localhost;user=frozzeasd;password=a1b2c4d#123qweasdzxcA;database=test";
+            services.AddDbContext<ApplicationContext>(options => options.UseMySql(connection));
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
